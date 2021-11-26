@@ -30,6 +30,7 @@ fclean:
 	make clean
 	rm -f ../../my.h
 	rm -f ../libmy.a
+	rm -f libmy.a
 
 clean:
 	rm -f *.o output

@@ -58,4 +58,3 @@ void move_duck_y(duck* d, game_data* data)
     sfSprite_setPosition(d->sprite, move);
     d->y += 30;
 }
-

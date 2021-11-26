@@ -10,6 +10,18 @@
 
     #include <SFML/Graphics.h>
 
+typedef struct button_t
+{
+    sfSprite* sprite;
+    sfTexture* texture;
+    sfBool animated;
+    sfIntRect rect;
+    int x;
+    int y;
+    sfVector2f position;
+    int anim_pos;
+} button;
+
 typedef struct duck_object
 {
     sfSprite* sprite;
@@ -37,6 +49,12 @@ typedef struct window_struct
     background bg;
 } window_t;
 
+typedef struct simple_image
+{
+    sfSprite* sprite;
+    sfTexture* texture;
+} img;
+
 typedef struct data
 {
     window_t* window;
@@ -44,7 +62,13 @@ typedef struct data
     int duck_launch;
     int speed;
     int step;
+    button* play;
+    button* help;
+    button* help_back;
+    button* replay;
+    button* quit;
     duck** duck;
+    img title;
 } game_data;
 
 #endif

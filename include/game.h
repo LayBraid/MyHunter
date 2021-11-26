@@ -14,6 +14,7 @@
     #include "utils.h"
     #include "ducks.h"
     #include "clocks.h"
+    #include "buttons.h"
 
 int game_launch(void);
 

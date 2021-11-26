@@ -17,6 +17,7 @@ window_t* window_create(char *name)
     window->bg.sprite = sfSprite_create();
     window->bg.texture = sfTexture_createFromFile("font.png", NULL);
     sfSprite_setTexture(window->bg.sprite, window->bg.texture, sfTrue);
+    sfRenderWindow_setFramerateLimit(window->window, 130);
     if (!window->window)
         return NULL;
     return window;

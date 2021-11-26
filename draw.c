@@ -14,7 +14,7 @@ int draw_ducks(game_data* data)
             move_duck(data->duck[i], data);
             anim_duck(data->duck[i], data->duck[i]->anim);
         } else {
-            if (data->duck[i]->anim < 11)
+            if (data->duck[i]->anim < 10)
                 anim_duck_death(data->duck[i], data->duck[i]->anim);
             move_duck_y(data->duck[i], data);
         }

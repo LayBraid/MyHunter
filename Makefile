@@ -16,7 +16,8 @@ SRC = game.c \
 	  ducks.c \
 	  clocks.c \
 	  draw.c \
-	  events/mouse_move_event.c
+	  events/mouse_move_event.c \
+	  buttons.c
 
 TESTS =
 

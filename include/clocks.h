@@ -12,9 +12,14 @@
     #include "utils.h"
     #include "game.h"
     #include "draw.h"
+    #include "buttons.h"
 
 int clock_duck(game_data* data, sfClock* clock);
 
 int clock_game_over(game_data* data, sfClock* clock);
+
+int clock_play(game_data* data, sfClock* clock);
+
+int clock_help(game_data* data, sfClock* clock);
 
 #endif
