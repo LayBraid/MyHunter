@@ -36,6 +36,15 @@ int check_on_button_help(game_data* data, sfVector2f vector)
     return 0;
 }
 
+int check_on_button_end(game_data* data, sfVector2f vector)
+{
+    if (vector.x >= 590 && vector.x <= (590 + 353) && vector.y >= 950 && vector.y <= (950 + 90)) //TODO REDUIRE
+        replay_game(data);
+    if (vector.x >= 990 && vector.x <= (990 + 177) && vector.y >= 950 && vector.y <= (950 + 90)) //TODO REDUIRE
+        sfRenderWindow_close(data->window->window);
+    return 0;
+}
+
 int mouse_move_event(game_data* data)
 {
     sfVector2i mouse;
@@ -47,7 +56,7 @@ int mouse_move_event(game_data* data)
         if (data->step == 1)
             check_on_duck(data, vector);
         if (data->step == 2)
-            sfRenderWindow_close(data->window->window);
+            check_on_button_end(data, vector);
         if (data->step == 0)
             check_on_button(data, vector);
         if (data->step == 3)

@@ -20,4 +20,6 @@ int game_launch(void);
 
 int game_over(game_data* data);
 
+int replay_game(game_data* data);
+
 #endif

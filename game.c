@@ -17,6 +17,7 @@ int title(game_data* data)
     data->title.texture = sfTexture_createFromFile("title.png", NULL);
     sfSprite_setTexture(data->title.sprite, data->title.texture, sfFalse);
     sfSprite_setPosition(data->title.sprite, vector);
+    return 0;
 }
 
 int init_game(game_data* data)
@@ -24,7 +25,7 @@ int init_game(game_data* data)
     data->score = 0;
     data->duck_launch = 0;
     data->speed = 10;
-    data->step = 2;
+    data->step = 0;
     data->duck = malloc(sizeof(duck*) * 6);
 
     init_play_button(data);
@@ -33,6 +34,17 @@ int init_game(game_data* data)
     init_quit_button(data);
     init_replay_button(data);
     title(data);
+    return 0;
+}
+
+int replay_game(game_data* data)
+{
+    data->score = 0;
+    data->duck_launch = 0;
+    data->speed = 10;
+    data->duck = malloc(sizeof(duck*) * 6);
+    data->step = 1;
+    init_ducks(data, data->duck_launch);
     return 0;
 }
 
