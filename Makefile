@@ -10,14 +10,20 @@ MAIN = main.c
 SRC = game.c \
 	  events/close_event.c \
 	  events/poll_event.c \
+	  events/mouse_click_event.c \
+	  events/key_event.c \
 	  utils.c \
+	  inits.c \
 	  utils_ducks.c \
 	  utils_texts.c \
 	  ducks.c \
 	  clocks.c \
+	  switch_menu.c \
+	  cursor.c \
 	  draw.c \
 	  events/mouse_move_event.c \
-	  buttons.c
+	  buttons.c \
+	  buttons_2.c
 
 TESTS =
 

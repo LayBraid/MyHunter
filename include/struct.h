@@ -27,10 +27,11 @@ typedef struct duck_object
     sfSprite* sprite;
     sfTexture* texture;
     int anim;
+    int anim_nb;
     int color;
-    int x;
-    int y;
-    int speed;
+    float x;
+    float y;
+    float speed;
     int id;
     sfBool life;
 } duck;
@@ -41,6 +42,12 @@ typedef struct sprite_background
     sfTexture* texture;
     char* path;
 } background;
+
+typedef struct sprite_cursor
+{
+    sfSprite* sprite;
+    sfTexture* texture;
+} cursor_t;
 
 typedef struct window_struct
 {
@@ -55,20 +62,34 @@ typedef struct simple_image
     sfTexture* texture;
 } img;
 
+typedef struct escape_menu_struct
+{
+    img *back;
+    button *pause;
+    button* resume;
+    button* restart;
+    button* main;
+    button* quit;
+} escape_menu_t;
+
 typedef struct data
 {
     window_t* window;
     int score;
+    int level;
     int duck_launch;
-    int speed;
+    float speed;
     int step;
     button* play;
     button* help;
     button* help_back;
     button* replay;
     button* quit;
+    cursor_t *cursor;
     duck** duck;
+    escape_menu_t *escape_menu;
     img title;
+    img font_clear;
 } game_data;
 
 #endif

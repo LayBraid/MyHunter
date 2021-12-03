@@ -15,4 +15,6 @@ int draw_ducks(game_data* data);
 
 int draw_sprite(game_data* data);
 
+int draw_cursor(game_data *data);
+
 #endif

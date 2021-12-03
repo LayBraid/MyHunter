@@ -9,9 +9,9 @@
 
 int draw_score(window_t* window, int score)
 {
-    sfFont* font = sfFont_createFromFile("Minecraft.ttf");
+    sfFont* font = sfFont_createFromFile("resources/Minecraft.ttf");
     char *str = "Score: ";
-    str = my_strcat(str, my_itoa(score));
+    str = my_strcat(str, my_itoa(score * 100));
     if (!font)
         return EXIT_FAILURE;
     sfText* text = sfText_create();
@@ -28,9 +28,9 @@ int draw_score(window_t* window, int score)
 
 int draw_score_go(window_t* window, int score)
 {
-    sfFont* font = sfFont_createFromFile("Minecraft.ttf");
+    sfFont* font = sfFont_createFromFile("resources/Minecraft.ttf");
     char *str = "Score: ";
-    str = my_strcat(str, my_itoa(score));
+    str = my_strcat(str, my_itoa(score * 100));
     if (!font)
         return EXIT_FAILURE;
     sfText* text = sfText_create();
@@ -48,7 +48,7 @@ int draw_score_go(window_t* window, int score)
 
 int draw_go(window_t* window, int size)
 {
-    sfFont* font = sfFont_createFromFile("Minecraft.ttf");
+    sfFont* font = sfFont_createFromFile("resources/Minecraft.ttf");
     if (!font)
         return EXIT_FAILURE;
     sfText* text = sfText_create();
@@ -66,7 +66,7 @@ int draw_go(window_t* window, int size)
 
 int draw_exit(window_t* window)
 {
-    sfFont* font = sfFont_createFromFile("Minecraft.ttf");
+    sfFont* font = sfFont_createFromFile("resources/Minecraft.ttf");
     if (!font)
         return EXIT_FAILURE;
     sfText* text = sfText_create();

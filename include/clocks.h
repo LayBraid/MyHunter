@@ -22,4 +22,6 @@ int clock_play(game_data* data, sfClock* clock);
 
 int clock_help(game_data* data, sfClock* clock);
 
+int clock_escape(game_data* data, sfClock* clock);
+
 #endif

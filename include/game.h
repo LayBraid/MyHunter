@@ -15,10 +15,12 @@
     #include "ducks.h"
     #include "clocks.h"
     #include "buttons.h"
+    #include "cursor.h"
+    #include "inits.h"
+
+int title(game_data* data);
 
 int game_launch(void);
-
-int game_over(game_data* data);
 
 int replay_game(game_data* data);
 
