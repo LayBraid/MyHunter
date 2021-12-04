@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "include/ducks.h"
+#include "ducks.h"
 
 int reset_duck(game_data* data, int i)
 {
@@ -22,6 +22,8 @@ int reset_duck(game_data* data, int i)
 
 int kill_duck(game_data* data, int i)
 {
+    sfMusic_stop(data->killed);
+    sfMusic_play(data->killed);
     data->duck[i]->life = sfFalse;
     data->duck[i]->anim = 4;
     data->score++;

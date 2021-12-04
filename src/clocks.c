@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "include/clocks.h"
+#include "clocks.h"
 
 int clock_duck(game_data* data, sfClock* clock)
 {

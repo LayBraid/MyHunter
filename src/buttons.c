@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "include/buttons.h"
+#include "buttons.h"
 
 int init_play_button(game_data* data)
 {

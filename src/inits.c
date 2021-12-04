@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "include/inits.h"
+#include "inits.h"
 
 int init_font_clear(game_data* data)
 {
@@ -57,5 +57,6 @@ int init_game(game_data* data)
     title(data);
     init_font_clear(data);
     init_escape(data);
+    init_sound(data);
     return 0;
 }

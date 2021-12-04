@@ -17,6 +17,7 @@
     #include "buttons.h"
     #include "cursor.h"
     #include "inits.h"
+    #include "sound.h"
 
 int title(game_data* data);
 

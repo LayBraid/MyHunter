@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "../include/events.h"
+#include "events.h"
 
 int key_event(game_data *data)
 {

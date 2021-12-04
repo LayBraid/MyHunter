@@ -5,25 +5,26 @@
 ## No file there , just an epitech header example
 ##
 
-MAIN = main.c
+MAIN = src/main.c
 
-SRC = game.c \
-	  events/close_event.c \
-	  events/poll_event.c \
-	  events/mouse_click_event.c \
-	  events/key_event.c \
-	  utils.c \
-	  inits.c \
-	  utils_ducks.c \
-	  utils_texts.c \
-	  ducks.c \
-	  clocks.c \
-	  switch_menu.c \
-	  cursor.c \
-	  draw.c \
-	  events/mouse_move_event.c \
-	  buttons.c \
-	  buttons_2.c
+SRC = src/game.c \
+	  src/events/close_event.c \
+	  src/events/poll_event.c \
+	  src/events/mouse_click_event.c \
+	  src/events/key_event.c \
+	  src/utils.c \
+	  src/inits.c \
+	  src/utils_ducks.c \
+	  src/utils_texts.c \
+	  src/ducks.c \
+	  src/clocks.c \
+	  src/switch_menu.c \
+	  src/cursor.c \
+	  src/draw.c \
+	  src/events/mouse_move_event.c \
+	  src/buttons.c \
+	  src/buttons_2.c \
+	  src/sound.c
 
 TESTS =
 
@@ -47,7 +48,8 @@ fclean:
 
 clean:
 	rm -f *.o
-	rm -f events/*.o
+	rm -f src/events/*.o
+	rm -f src/*.o
 	rm -rf *.gcda
 	rm -rf *.gcno
 	rm -rf *.c.gcov

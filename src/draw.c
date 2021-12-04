@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "include/draw.h"
+#include "draw.h"
 
 int draw_ducks(game_data* data)
 {

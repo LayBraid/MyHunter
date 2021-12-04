@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "include/switch_game.h"
+#include "switch_game.h"
 
 int switch_game(game_data *data, int i)
 {

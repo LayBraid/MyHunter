@@ -9,6 +9,10 @@
     #define MYHUNTER_STRUCT_C_H
 
     #include <SFML/Graphics.h>
+    #include <SFML/System.h>
+    #include <SFML/Window.h>
+    #include <SFML/Graphics.h>
+    #include <SFML/Audio.h>
 
 typedef struct button_t
 {
@@ -90,6 +94,8 @@ typedef struct data
     escape_menu_t *escape_menu;
     img title;
     img font_clear;
+    sfMusic *killed;
+    sfMusic *shoot;
 } game_data;
 
 #endif

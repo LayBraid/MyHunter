@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "include/buttons.h"
+#include "../include/buttons.h"
 
 int init_escape_pause(game_data* data)
 {

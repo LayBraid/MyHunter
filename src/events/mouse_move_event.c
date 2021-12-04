@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "../include/events.h"
+#include "events.h"
 
 int mouse_move_event(game_data* data)
 {
@@ -15,8 +15,11 @@ int mouse_move_event(game_data* data)
         mouse = sfMouse_getPositionRenderWindow(data->window->window);
         vector.x = mouse.x;
         vector.y = mouse.y;
-        if (data->step == 1)
+        if (data->step == 1) {
+            sfMusic_stop(data->shoot);
+            sfMusic_play(data->shoot);
             check_on_duck(data, vector);
+        }
         if (data->step == 2)
             check_on_button_end(data, vector);
         if (data->step == 0)

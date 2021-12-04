@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "include/cursor.h"
+#include "cursor.h"
 
 int init_cursor(game_data *data)
 {
