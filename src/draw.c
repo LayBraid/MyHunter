@@ -24,12 +24,14 @@ int draw_ducks(game_data* data)
 
 int draw_sprite(game_data* data)
 {
-    sfRenderWindow_drawSprite(data->window->window, data->window->bg.sprite, NULL); //TODO REDUIRE
+    sfRenderWindow_drawSprite(data->window->window,
+                              data->window->bg.sprite, NULL);
     draw_ducks(data);
     for (int i = 0; i < data->duck_launch; i++)
         sfRenderWindow_drawSprite(data->window->window, data->duck[i]->sprite,
-                                  NULL); //TODO REDUIRE
-    sfRenderWindow_drawSprite(data->window->window, data->font_clear.sprite, NULL); //TODO REDUIRE
+                                  NULL);
+    sfRenderWindow_drawSprite(data->window->window,
+                              data->font_clear.sprite, NULL);
     draw_score(data->window, data->score);
     return 0;
 }
@@ -49,6 +51,7 @@ int draw_cursor(game_data *data)
         vector.y = mouse.y - 32;
     }
     sfSprite_setPosition(data->cursor->sprite, vector);
-    sfRenderWindow_drawSprite(data->window->window, data->cursor->sprite, NULL); //TODO REDUIRE
+    sfRenderWindow_drawSprite(data->window->window,
+                              data->cursor->sprite, NULL);
     return 0;
 }

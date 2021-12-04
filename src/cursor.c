@@ -11,7 +11,8 @@ int init_cursor(game_data *data)
 {
     data->cursor = malloc(sizeof(cursor_t));
     data->cursor->sprite = sfSprite_create();
-    data->cursor->texture = sfTexture_createFromFile("resources/cursor.png", NULL); //TODO REDUIRE
+    data->cursor->texture = sfTexture_createFromFile(
+            "resources/cursor.png", NULL);
     sfSprite_setTexture(data->cursor->sprite, data->cursor->texture, sfFalse);
     switch_cursor(data, 64);
     return 0;

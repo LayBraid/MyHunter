@@ -18,6 +18,7 @@ SRC = src/game.c \
 	  src/utils_texts.c \
 	  src/ducks.c \
 	  src/clocks.c \
+	  src/clocks_2.c \
 	  src/switch_menu.c \
 	  src/cursor.c \
 	  src/draw.c \

@@ -24,4 +24,6 @@ int clock_help(game_data* data, sfClock* clock);
 
 int clock_escape(game_data* data, sfClock* clock);
 
+int simplify_clock(game_data *data);
+
 #endif
