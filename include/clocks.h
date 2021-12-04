@@ -26,4 +26,6 @@ int clock_escape(game_data* data, sfClock* clock);
 
 int simplify_clock(game_data *data);
 
+int clock_credits(game_data* data, sfClock* clock);
+
 #endif

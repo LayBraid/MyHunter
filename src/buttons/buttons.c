@@ -21,7 +21,7 @@ int init_play_button(game_data* data)
     vector.y = play->y;
     play->position = vector;
     sfSprite_setPosition(play->sprite, play->position);
-    data->play = play;
+    data->buttons->play = play;
     return 0;
 }
 
@@ -39,7 +39,7 @@ int init_help_button(game_data* data)
     vector.y = help->y;
     help->position = vector;
     sfSprite_setPosition(help->sprite, help->position);
-    data->help = help;
+    data->buttons->help = help;
     return 0;
 }
 
@@ -57,7 +57,7 @@ int init_help_back_button(game_data* data)
     vector.y = 256;
     help->position = vector;
     sfSprite_setPosition(help->sprite, help->position);
-    data->help_back = help;
+    data->buttons->help_back = help;
     return 0;
 }
 
@@ -75,7 +75,7 @@ int init_replay_button(game_data* data)
     vector.y = play->y;
     play->position = vector;
     sfSprite_setPosition(play->sprite, play->position);
-    data->replay = play;
+    data->buttons->replay = play;
     return 0;
 }
 
@@ -93,6 +93,6 @@ int init_quit_button(game_data* data)
     vector.y = play->y;
     play->position = vector;
     sfSprite_setPosition(play->sprite, play->position);
-    data->quit = play;
+    data->buttons->quit = play;
     return 0;
 }

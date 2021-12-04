@@ -18,11 +18,14 @@
     #include "cursor.h"
     #include "inits.h"
     #include "sound.h"
+    #include "data.h"
 
 int title(game_data* data);
 
 int game_launch(void);
 
 int replay_game(game_data* data);
+
+int reset_game(game_data* data);
 
 #endif

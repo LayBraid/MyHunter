@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "inits.h"
+#include "../include/inits.h"
 
 int init_font_clear(game_data* data)
 {
@@ -39,15 +39,8 @@ int init_escape(game_data* data)
     return 0;
 }
 
-int init_game(game_data* data)
+int init_game_other_init(game_data *data)
 {
-    data->score = 0;
-    data->duck_launch = 0;
-    data->speed = 1.0f;
-    data->step = 0;
-    data->duck = malloc(sizeof(duck*) * 6);
-    data->escape_menu = malloc(sizeof(escape_menu_t));
-
     init_play_button(data);
     init_help_button(data);
     init_help_back_button(data);
@@ -58,5 +51,20 @@ int init_game(game_data* data)
     init_font_clear(data);
     init_escape(data);
     init_sound(data);
+    init_credits_button(data);
+    init_credits_back_button(data);
+    return 0;
+}
+
+int init_game(game_data* data)
+{
+    data->score = 0;
+    data->duck_launch = 0;
+    data->speed = 1.0f;
+    data->step = 0;
+    data->duck = malloc(sizeof(duck*) * 6);
+    data->escape_menu = malloc(sizeof(escape_menu_t));
+    data->buttons = malloc(sizeof(buttons_t));
+    init_game_other_init(data);
     return 0;
 }

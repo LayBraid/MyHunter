@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "game.h"
+#include "../include/game.h"
 
 int title(game_data* data)
 {
@@ -20,15 +20,20 @@ int title(game_data* data)
     return 0;
 }
 
-int replay_game(game_data* data)
+int game_clock_search(game_data *data, sfClock *clock)
 {
-    data->score = 0;
-    data->duck_launch = 0;
-    data->speed = 0.5f;
-    data->duck = malloc(sizeof(duck*) * 6);
-    data->step = 1;
-    switch_cursor(data, 64);
-    init_ducks(data, data->duck_launch);
+    if (data->step == 0)
+        clock_play(data, clock);
+    if (data->step == 1)
+        clock_duck(data, clock);
+    if (data->step == 2)
+        clock_game_over(data, clock);
+    if (data->step == 3)
+        clock_help(data, clock);
+    if (data->step == 4)
+        clock_escape(data, clock);
+    if (data->step == 5)
+        clock_credits(data, clock);
     return 0;
 }
 
@@ -44,16 +49,7 @@ int game_launch(void)
     while (sfRenderWindow_isOpen(data->window->window)) {
         sfRenderWindow_clear(data->window->window, sfBlack);
         poll_event(data);
-        if (data->step == 0)
-            clock_play(data, clock);
-        if (data->step == 1)
-            clock_duck(data, clock);
-        if (data->step == 2)
-            clock_game_over(data, clock);
-        if (data->step == 3)
-            clock_help(data, clock);
-        if (data->step == 4)
-            clock_escape(data, clock);
+        game_clock_search(data, clock);
         draw_cursor(data);
         sfRenderWindow_display(data->window->window);
     }

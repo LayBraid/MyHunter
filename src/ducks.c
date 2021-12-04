@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "ducks.h"
+#include "../include/ducks.h"
 
 int reset_duck(game_data* data, int i)
 {

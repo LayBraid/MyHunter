@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "include/utils.h"
+#include "../include/utils.h"
 
 int anim_duck(duck *d, int want)
 {

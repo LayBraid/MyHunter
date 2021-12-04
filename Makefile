@@ -11,10 +11,12 @@ SRC = src/game.c \
 	  src/events/close_event.c \
 	  src/events/poll_event.c \
 	  src/events/mouse_click_event.c \
+	  src/events/mouse_click_event_2.c \
 	  src/events/key_event.c \
 	  src/utils.c \
 	  src/inits.c \
 	  src/utils_ducks.c \
+	  src/utils_game.c \
 	  src/utils_texts.c \
 	  src/ducks.c \
 	  src/clocks.c \
@@ -23,9 +25,11 @@ SRC = src/game.c \
 	  src/cursor.c \
 	  src/draw.c \
 	  src/events/mouse_move_event.c \
-	  src/buttons.c \
-	  src/buttons_2.c \
-	  src/sound.c
+	  src/buttons/buttons.c \
+	  src/buttons/buttons_2.c \
+	  src/buttons/buttons_3.c \
+	  src/sound.c \
+	  src/data.c
 
 TESTS =
 
@@ -50,6 +54,7 @@ fclean:
 clean:
 	rm -f *.o
 	rm -f src/events/*.o
+	rm -f src/buttons/*.o
 	rm -f src/*.o
 	rm -rf *.gcda
 	rm -rf *.gcno

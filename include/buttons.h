@@ -31,4 +31,8 @@ int init_escape_main(game_data* data);
 
 int init_escape_quit(game_data* data);
 
+int init_credits_button(game_data* data);
+
+int init_credits_back_button(game_data* data);
+
 #endif

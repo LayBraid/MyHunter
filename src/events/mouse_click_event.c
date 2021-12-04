@@ -24,16 +24,21 @@ int check_on_duck(game_data* data, sfVector2f vector)
 
 int check_on_button(game_data* data, sfVector2f vector)
 {
-    if (vector.x >= data->play->position.x &&
-        vector.x <= (data->play->position.x + 410) &&
-        vector.y >= data->play->position.y &&
-        vector.y <= (data->play->position.y + 90))
+    if (vector.x >= data->buttons->play->position.x &&
+        vector.x <= (data->buttons->play->position.x + 410) &&
+        vector.y >= data->buttons->play->position.y &&
+        vector.y <= (data->buttons->play->position.y + 90))
         switch_game(data, 1);
-    if (vector.x >= data->help->position.x &&
-        vector.x <= (data->help->position.x + 90) &&
-        vector.y >= data->help->position.y &&
-        vector.y <= (data->help->position.y + 90))
+    if (vector.x >= data->buttons->help->position.x &&
+        vector.x <= (data->buttons->help->position.x + 90) &&
+        vector.y >= data->buttons->help->position.y &&
+        vector.y <= (data->buttons->help->position.y + 90))
         switch_game(data, 3);
+    if (vector.x >= data->buttons->credits->position.x &&
+        vector.x <= (data->buttons->credits->position.x + 275) &&
+        vector.y >= data->buttons->credits->position.y &&
+        vector.y <= (data->buttons->credits->position.y + 90))
+        switch_game(data, 5);
     return 0;
 }
 
@@ -63,10 +68,10 @@ int check_on_button_escape(game_data* data, sfVector2f vector)
         switch_game(data, 1);
     if (vector.x >= 695 && vector.x <= (695 + 410) && vector.y >= 495 &&
         vector.y <= (495 + 90))
-        replay_game(data);
+        switch_game(data, 999);
     if (vector.x >= 695 && vector.x <= (695 + 410) && vector.y >= 615 &&
         vector.y <= (615 + 90))
-        switch_game(data, 5);
+        switch_game(data, 0);
     if (vector.x >= 695 && vector.x <= (695 + 410) && vector.y >= 735 &&
         vector.y <= (735 + 90))
         sfRenderWindow_close(data->window->window);

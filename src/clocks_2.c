@@ -25,3 +25,19 @@ int simplify_clock(game_data *data)
                               data->escape_menu->quit->sprite, NULL);
     return (0);
 }
+
+int clock_credits(game_data* data, sfClock* clock)
+{
+    sfTime time;
+    float seconds;
+    time = sfClock_getElapsedTime(clock);
+    seconds = time.microseconds / 100.0;
+    if (seconds > 1.0/6) {
+        sfRenderWindow_drawSprite(data->window->window,
+                                  data->window->bg.sprite, NULL);
+        sfRenderWindow_drawSprite(data->window->window,
+                                  data->buttons->credits_back->sprite, NULL);
+        sfClock_restart(clock);
+    }
+    return 0;
+}

@@ -66,6 +66,17 @@ typedef struct simple_image
     sfTexture* texture;
 } img;
 
+typedef struct all_buttons
+{
+    button* play;
+    button* help;
+    button* help_back;
+    button* replay;
+    button* quit;
+    button* credits;
+    button* credits_back;
+} buttons_t;
+
 typedef struct escape_menu_struct
 {
     img *back;
@@ -84,11 +95,7 @@ typedef struct data
     int duck_launch;
     float speed;
     int step;
-    button* play;
-    button* help;
-    button* help_back;
-    button* replay;
-    button* quit;
+    buttons_t *buttons;
     cursor_t *cursor;
     duck** duck;
     escape_menu_t *escape_menu;

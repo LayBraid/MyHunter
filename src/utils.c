@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "utils.h"
+#include "../include/utils.h"
 
 window_t* window_create(char *name)
 {

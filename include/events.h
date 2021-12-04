@@ -30,4 +30,6 @@ int key_event(game_data *window);
 
 int check_on_button_escape(game_data* data, sfVector2f vector);
 
+int check_on_button_credits(game_data* data, sfVector2f vector);
+
 #endif

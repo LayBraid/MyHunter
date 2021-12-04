@@ -5,7 +5,7 @@
 ** No file there , just an epitech header example
 */
 
-#include "include/utils.h"
+#include "../include/utils.h"
 
 int draw_score(window_t* window, int score)
 {
