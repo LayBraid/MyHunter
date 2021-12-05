@@ -30,6 +30,6 @@ int draw_score_go(window_t* window, int score);
 
 int draw_go(window_t* window, int size);
 
-int draw_exit(window_t* window);
+int draw_top_go(window_t* window, game_data *data);
 
 #endif

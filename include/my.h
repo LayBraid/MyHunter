@@ -30,4 +30,6 @@ char *my_strcat(char *dest, char const *src);
 
 int my_rand(int i, int j);
 
+int my_atoi(char *str);
+
 #endif

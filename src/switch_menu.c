@@ -41,6 +41,8 @@ int switch_game(game_data *data, int i)
     }
     if (i == 2) {
         data->step = 2;
+        put_in_data_saving(data->score, "name");
+        get_top_score_with_data(data);
         switch_cursor(data, 64);
         return 3;
     }

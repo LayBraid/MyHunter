@@ -40,7 +40,7 @@ int draw_score_go(window_t* window, int score)
     sfText_setColor(text, sfRed);
     sfVector2f vector2F;
     vector2F.x = 700;
-    vector2F.y = 500;
+    vector2F.y = 580;
     sfText_setPosition(text, vector2F);
     sfRenderWindow_drawText(window->window, text, NULL);
     return 0;
@@ -64,19 +64,21 @@ int draw_go(window_t* window, int size)
     return 0;
 }
 
-int draw_exit(window_t* window)
+int draw_top_go(window_t* window, game_data *data)
 {
     sfFont* font = sfFont_createFromFile("resources/Minecraft.ttf");
+    char *str = "Top: ";
+    str = my_strcat(str, my_itoa(my_atoi(data->top->first) * 100));
     if (!font)
         return EXIT_FAILURE;
     sfText* text = sfText_create();
-        sfText_setString(text, "CLICK TO EXIT GAME");
+    sfText_setString(text, str);
     sfText_setFont(text, font);
-    sfText_setCharacterSize(text, 50);
+    sfText_setCharacterSize(text, 70);
     sfText_setColor(text, sfRed);
     sfVector2f vector2F;
-    vector2F.x = 630;
-    vector2F.y = 1000;
+    vector2F.x = 700;
+    vector2F.y = 500;
     sfText_setPosition(text, vector2F);
     sfRenderWindow_drawText(window->window, text, NULL);
     return 0;

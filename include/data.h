@@ -18,6 +18,4 @@ int put_in_data_saving(int score, char *name);
 
 char **get_top_score_with_buffer(char *buffer);
 
-int get_top_score_with_data(game_data *data);
-
 #endif

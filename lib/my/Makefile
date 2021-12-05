@@ -8,6 +8,7 @@
 SRC = my_putchar.c \
 	  my_putstr.c \
 	  my_itoa.c \
+	  my_atoi.c \
 	  my_strcpy.c \
 	  my_strcat_c.c \
 	  my_strlen.c \

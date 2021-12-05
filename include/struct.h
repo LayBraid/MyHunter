@@ -87,6 +87,13 @@ typedef struct escape_menu_struct
     button* quit;
 } escape_menu_t;
 
+typedef struct top_3_struct
+{
+    char *first;
+    char *second;
+    char *three;
+} top_3_t;
+
 typedef struct data
 {
     window_t* window;
@@ -101,6 +108,7 @@ typedef struct data
     escape_menu_t *escape_menu;
     img title;
     img font_clear;
+    top_3_t *top;
     sfMusic *killed;
     sfMusic *shoot;
 } game_data;

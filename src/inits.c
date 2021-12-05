@@ -69,6 +69,10 @@ int init_game(game_data* data)
     data->duck = malloc(sizeof(duck*) * 6);
     data->escape_menu = malloc(sizeof(escape_menu_t));
     data->buttons = malloc(sizeof(buttons_t));
+    data->top = malloc(sizeof(top_3_t));
+    data->top->first = "0";
+    data->top->second = "0";
+    data->top->three = "0";
     init_game_other_init(data);
     return 0;
 }

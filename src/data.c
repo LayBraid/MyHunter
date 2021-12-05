@@ -69,14 +69,3 @@ char **get_top_score_with_buffer(char *buffer)
     }
     return top;
 }
-
-int get_top_score_with_data(game_data *data)
-{
-    char *buffer = get_in_data_saving();
-    char **top = get_top_score_with_buffer(buffer);
-    for (int i = 0; top[i]; i++) {
-        my_putstr(top[i]);
-        my_putchar('\n');
-    }
-    return 0;
-}

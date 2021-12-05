@@ -35,6 +35,7 @@ int clock_game_over(game_data* data, sfClock* clock)
                                   data->buttons->quit->sprite, NULL);
         draw_go(data->window, 150);
         draw_score_go(data->window, data->score);
+        draw_top_go(data->window, data);
         sfClock_restart(clock);
     }
     return 0;

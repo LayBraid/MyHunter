@@ -29,7 +29,8 @@ SRC = src/game.c \
 	  src/buttons/buttons_2.c \
 	  src/buttons/buttons_3.c \
 	  src/sound.c \
-	  src/data.c
+	  src/data.c \
+	  src/top.c
 
 TESTS =
 
