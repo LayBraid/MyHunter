@@ -52,9 +52,9 @@ int check_on_button_help(game_data* data, sfVector2f vector)
 
 int check_on_button_end(game_data* data, sfVector2f vector)
 {
-    if (vector.x >= 590 && vector.x <= (590 + 353) && vector.y >= 950 &&
+    if (vector.x >= 560 && vector.x <= (560 + 410) && vector.y >= 950 &&
         vector.y <= (950 + 90))
-        replay_game(data);
+        switch_game(data, 0);
     if (vector.x >= 990 && vector.x <= (990 + 177) && vector.y >= 950 &&
         vector.y <= (950 + 90))
         sfRenderWindow_close(data->window->window);

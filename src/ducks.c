@@ -22,8 +22,8 @@ int reset_duck(game_data* data, int i)
 
 int kill_duck(game_data* data, int i)
 {
-    sfMusic_stop(data->killed);
-    sfMusic_play(data->killed);
+    //sfMusic_stop(data->killed);
+    //sfMusic_play(data->killed);
     data->duck[i]->life = sfFalse;
     data->duck[i]->anim = 4;
     data->score++;

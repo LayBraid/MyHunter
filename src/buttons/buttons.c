@@ -65,10 +65,10 @@ int init_replay_button(game_data* data)
 {
     button* play = malloc(sizeof(button));
     play->sprite = sfSprite_create();
-    play->texture = sfTexture_createFromFile("resources/play.png", NULL);
+    play->texture = sfTexture_createFromFile("resources/main_menu.png", NULL);
     sfSprite_setTexture(play->sprite, play->texture, sfFalse);
     play->animated = sfFalse;
-    play->x = 590;
+    play->x = 560;
     play->y = 950;
     sfVector2f vector;
     vector.x = play->x;

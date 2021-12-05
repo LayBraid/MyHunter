@@ -31,8 +31,8 @@ int mouse_move_event(game_data* data)
         vector.x = mouse.x;
         vector.y = mouse.y;
         if (data->step == 1) {
-            sfMusic_stop(data->shoot);
-            sfMusic_play(data->shoot);
+            //sfMusic_stop(data->shoot);
+            //sfMusic_play(data->shoot);
             check_on_duck(data, vector);
         } else
             mouse_check_step(data, vector);
