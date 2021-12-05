@@ -12,8 +12,10 @@ int init_font_clear(game_data* data)
     sfVector2f vector;
 
     data->font_clear.sprite = sfSprite_create();
-    data->font_clear.texture = sfTexture_createFromFile("resources/font_clear.png", NULL);
-    sfSprite_setTexture(data->font_clear.sprite, data->font_clear.texture, sfFalse);
+    data->font_clear.texture = sfTexture_createFromFile(
+            "resources/font_clear.png", NULL);
+    sfSprite_setTexture(data->font_clear.sprite, data->
+        font_clear.texture, sfFalse);
     vector.x = 2.8f;
     vector.y = 2.8f;
     sfSprite_setScale(data->font_clear.sprite, vector);
@@ -26,8 +28,10 @@ int init_escape(game_data* data)
 
     data->escape_menu->back = malloc(sizeof(img));
     data->escape_menu->back->sprite = sfSprite_create();
-    data->escape_menu->back->texture = sfTexture_createFromFile("resources/escape_back.png", NULL);
-    sfSprite_setTexture(data->escape_menu->back->sprite, data->escape_menu->back->texture, sfFalse);
+    data->escape_menu->back->texture = sfTexture_createFromFile(
+            "resources/escape_back.png", NULL);
+    sfSprite_setTexture(data->escape_menu->back->sprite, data->
+        escape_menu->back->texture, sfFalse);
     vector.x = 2.8f;
     vector.y = 2.8f;
     sfSprite_setScale(data->escape_menu->back->sprite, vector);
