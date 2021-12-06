@@ -9,7 +9,8 @@
 
 int poll_event(game_data* data)
 {
-    while (sfRenderWindow_pollEvent(data->window->window, &data->window->event)) {
+    while (sfRenderWindow_pollEvent(data->window->window,
+                                    &data->window->event)) {
         close_event(data->window);
         mouse_move_event(data);
         key_event(data);
