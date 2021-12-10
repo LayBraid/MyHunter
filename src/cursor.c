@@ -27,4 +27,5 @@ int switch_cursor(game_data *data, int nb)
     rect.width = 64;
     rect.height = 64;
     sfSprite_setTextureRect(data->cursor->sprite, rect);
+    return 0;
 }
